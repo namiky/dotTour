@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>dotTour</title>
+    <!-- meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- CSS -->
+    <link rel="shortcut icon" href="css/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.panorama.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.1.css" media="screen" />
+    
+    <!-- JS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.panorama.js"></script>
+    <script type="text/javascript">
+     /*****************************************
+      ***                                   ***
+      ***           パノラマ                                            ***
+      ***           Panorama                ***
+      *****************************************/
+     /* 本体 */
+      $(document).ready(function() {
+        $("img.advancedpanorama").panorama({
+          auto_start : false,
+          start_position : 2000
+        }),
+        /* 高さをウインドウサイズから取得 */
+        H = $(window).height();
+        $(".panorama-viewport").css("height", H),
+        $(".advancedpanorama").css("height", H); 
+      });
+      
+      /* 更新でリサイズ機能 */
+     $(window).bind('resize',function(){
+       window.location.href = window.location.href;
+     });
+      
+    </script>
+    <script type="text/javascript" src="js/cvi_text_lib.js"></script>
+    <script type="text/javascript" src="js/jquery.advanced-panorama.js"></script>
+    <script type="text/javascript" src="js/jquery.flipv.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox-1.3.1.pack.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.thickbox').fancybox();
+      });
+    </script>
+
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
+  </head>
+  <body>
+    <div id="page">
+      <img src="img/room2.jpg" class="advancedpanorama" width="2448" height="575" usemap="testmap" alt="stdio4" />
+      <map id="testmap" name="testmap">
+        <!-- 
+                  リンク型 
+        <area shape="rect" coords="2210,100,2300,250" href="room1.html" alt="1スタ" />
+        <area shape="rect" coords="690,110,720,200" href="room3.html" alt="部室" />
+                   アイテム型 
+        <area shape="rect" coords="2013,114,2091,210" href="img/statue1.jpg" alt="statues" class="thickbox" />
+        <area shape="rect" coords="1920,276,2070,351" href="img/gouges.jpg" alt="gouges" class="thickbox" />
+        -->
+      </map>
+    </div>
+  </body>
+</html>
