@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>dotTour</title>
+    <title>NewWave.Tour</title>
     <!-- meta -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -26,7 +26,8 @@
           start_position : 0
         }),
         /* 高さをウインドウサイズから取得 */
-        H = $(window).height()+0;
+       /* 広告があるから下に余白 */
+        H = $(window).height()-20;
         
         $(".body").css("height", H),
         $(".page").css("height", H),
@@ -57,15 +58,15 @@
   </head>
   <body>
     <div id="page">
-      <img src="img/room1.jpg" class="advancedpanorama" width="4194" height="1394" usemap="testmap" alt="stdio1" />
+      <img src="img/room1.jpg" class="advancedpanorama" width="4194" height="0" usemap="testmap" alt="Studio(1F)" />
       <map id="testmap" name="testmap">
-        <!-- 
-                  リンク型 
-        <area shape="rect" coords="1030,60,1070,290" href="room2.html" alt="Go to 4stduio"/>
-        <area shape="rect" coords="275,40,325,250" href="room3.html" alt="Go to Clubroom"/>
         
-                    アイテム型 
-        <area shape="rect" coords="2013,114,2091,210" href="img/statue1.jpg" alt="statues" class="thickbox" />
+                  <!--リンク型--> 
+       <!-- <area shape="rect" coords="1030,60,1070,290" href="room2.html" alt="Go to 4stduio"/>
+        <area shape="rect" coords="275,40,325,250" href="room3.html" alt="Go to Clubroom"/>
+        -->
+                   <!-- アイテム型--> 
+        <!--<area shape="rect" coords="2013,114,2091,210" href="img/statue1.jpg" alt="statues" class="thickbox" />
         <area shape="rect" coords="1920,276,2070,351" href="img/gouges.jpg" alt="gouges" class="thickbox" />
         -->
       </map>

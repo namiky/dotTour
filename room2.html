@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>dotTour</title>
+    <title>NewWave.Tour</title>
     <!-- meta -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -26,7 +26,8 @@
           start_position : 2000
         }),
         /* 高さをウインドウサイズから取得 */
-        H = $(window).height();
+       /* 広告があるから下に余白 */
+        H = $(window).height()-20;
         $(".panorama-viewport").css("height", H),
         $(".advancedpanorama").css("height", H); 
       });
@@ -54,7 +55,7 @@
   </head>
   <body>
     <div id="page">
-      <img src="img/room2.jpg" class="advancedpanorama" width="2448" height="575" usemap="testmap" alt="stdio4" />
+      <img src="img/room2.jpg" class="advancedpanorama" width="4194"  height="0" usemap="testmap" alt="Studio(4F)" />
       <map id="testmap" name="testmap">
         <!-- 
                   リンク型 
