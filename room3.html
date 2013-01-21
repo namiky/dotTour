@@ -46,6 +46,15 @@
       $(document).ready(function() {
         $('.thickbox').fancybox();
       });
+      //スタートナビ
+      $(document).ready(function() {
+        $.fancybox({
+          onStart : true,
+          href : "#nav",
+          title:"ClubRoom",
+          overlayOpacity:"0.8"
+        });
+      });
     </script>
 
 
@@ -54,6 +63,25 @@
 
   </head>
   <body>
+
+    <!--スタートナビ -->
+        <div style="display:none">
+      <div  id="nav">
+        <span><strong>NewWave.Tour</strong></span>
+        <br>
+        <img src="img/nav.jpg"style="height:367px;width:579px" alt="">
+        <br><p>
+        ・ドラッグで左右に移動が出来ます。<br>
+        ・右下/左下のボタンで左右に自動で移動を開始します。<br>
+        ・真ん中の下のボタンで停止できます。<br>
+        ・ブラウザのサイズと同等の表示サイズに設定されています。<br>描写に気になる場合はブラウザのサイズを調節してください。<br>
+        </p><br>
+
+        当ページは一部のブラウザでは表示が出来ない・動作が遅いといった不具合があるケースがございます。ご了承ください。
+        <br>
+      </div>
+    </div>
+    <!--パノラマ -->
     <div id="page">
       <img src="img/room3.jpg" class="advancedpanorama" width="4194"  height="0" usemap="testmap" alt="ClubRoom" />
       <map id="testmap" name="testmap">
